@@ -1,0 +1,34 @@
+repo_url: "https://github.com/I4NI-5150/I4NI-5150-auto.git"
+branch: "main"
+workdir: "./repo"
+author_name: "I4NI-5150"
+author_email: "your@email.com"
+
+improve:
+  python_black: true
+  python_ruff: true
+  js_prettier: true
+  md_lint: true
+  add_editorconfig: true
+  add_gitattributes: true
+  refresh_readme_toc: true
+  inject_badges: true
+
+include_globs:
+  - "**/*.py"
+  - "**/*.js"
+  - "**/*.ts"
+  - "**/*.json"
+  - "**/*.md"
+  - "**/*.yml"
+  - "**/*.yaml"
+
+exclude_globs:
+  - "node_modules/**"
+  - ".git/**"
+  - "**/.venv/**"
+  - "**/__pycache__/**"
+
+commit_prefix: "chore(auto):"
+min_changed_lines_for_commit: 1
+cron_expr: "*/15 * * * *"
